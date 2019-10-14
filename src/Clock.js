@@ -10,7 +10,17 @@ class Clock extends React.Component {
   }
 
   render() {
-    return <div>The time is {this.state.time}</div>;
+    return (
+      <div className="ui container">
+        <div className="ui placeholder segment" style={{padding: '0', minHeight: '150px', marginTop: '20px'}}>
+          <div className="ui icon header" style={{margin: '0'}}>
+            <i className="small stopwatch icon"></i>
+            The current time is.
+            <div className="ui header" style={{margin: '0', minHeight: '30px'}}>{this.state.time}</div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
